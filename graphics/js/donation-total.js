@@ -20,8 +20,8 @@ $(() => {
 			// Math.floor(newVal) removes the cents/pence.
 			// "toLocaleString" adds commas to the donation total to separate 1000s.
 			
-			//var value = Math.floor(newVal).toLocaleString('en-US', {minimumFractionDigits: 0});
-			var value = newVal.toLocaleString('en-US', {minimumFractionDigits: 0});
+			var value = Math.floor(newVal).toLocaleString('en-US', {minimumFractionDigits: 0});
+			//var value = newVal.toLocaleString('en-US', {minimumFractionDigits: 0});
 
 			donationTotalElem.html('$'+value); // donation-total.html
 		}
@@ -44,8 +44,8 @@ $(() => {
 				// Math.floor(now) removes the cents/pence.
 				// "toLocaleString" adds commas to the donation total to separate 1000s.
 
-				//var value = Math.floor(now).toLocaleString('en-US', {minimumFractionDigits: 0});
-				var value = now.toLocaleString('en-US', {minimumFractionDigits: 0});
+				var value = Math.floor(now).toLocaleString('en-US', {minimumFractionDigits: 0});
+				//var value = now.toLocaleString('en-US', {minimumFractionDigits: 0});
 
 				target.html('$'+value); // donation-total.html
 			}
