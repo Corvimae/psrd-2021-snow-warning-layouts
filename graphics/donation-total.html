@@ -5,6 +5,28 @@
 		
 		<!-- CSS -->
 		<link href="css/common.css" rel="stylesheet"/>
+
+		<style type="text/css">
+			.container {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
+			.container > * {
+				max-width: max-content;
+				padding: 0.25rem 1rem;
+			}
+
+			.total-raised-label {
+				font-size: 2.5rem;
+			}
+
+			#donationTotal {
+				font-variant-numeric: tabular-nums;
+				font-size: 5rem;
+			}
+		</style>
 		
 		<!-- JavaScript -->
 		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
@@ -12,6 +34,9 @@
 		<script src="js/donation-total.js"></script>
 	</head>
 	<body>
-		<span id="donationTotal"></span>
+		<div class="container">
+			<span class="total-raised-label subtitle">Total Raised</span>
+			<span id="donationTotal" class="title"></span>
+		</div>
 	</body>
 </html>

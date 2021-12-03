@@ -9,7 +9,9 @@ $(() => {
 	var gameSystem = $('#gameSystem'); // game-system.html
 	var gameEstimate = $('#gameEstimate'); // game-estimate.html
 	var player = $('#player'); // player.html
+	var pronouns = $('#pronouns'); // player.html
 	var twitch = $('#twitch'); // twitch.html
+	var allPlayers = $('#allPlayers'); // twitch.html
 	
 	// This is where the information is received for the run we want to display.
 	// The "change" event is triggered when the current run is changed.
@@ -28,7 +30,7 @@ $(() => {
 		
 		// Checks if we are on the player.html/twitch.html page.
 		// This is done by checking if the #player/#twitch span exists.
-		if (player.length || twitch.length) {
+		if (player.length || twitch.length || allPlayers.length) {
 			// Open the webpage with a hash parameter on the end to choose the team.
 			// eg: http://localhost:9090/bundles/speedcontrol-simpletext/graphics/player.html#2
 			// If this can't be found, defaults to 1.
@@ -36,11 +38,23 @@ $(() => {
 			
 			// Arrays start from 0 and not 1, so have to adjust for that.
 			var team = runData.teams[playerNumber-1];
+
 			
 			// speedcontrol has the ability to have multiple players in a team,
 			// but for here we'll just return the 1st one.
 			player.html(team.players[0].name); // player.html
 			twitch.html(team.players[0].social.twitch); // twitch.html
+			pronouns.html(`(${team.players[0].pronouns})`);
+			if (team.players[0].pronouns) {
+				pronouns.show();
+			} else {
+				pronouns.hide();
+			}
+
+			allPlayers.html(runData.teams.reduce((acc, { players }) => [
+				...acc,
+				...players.map(player => player.name)
+			], []).join(', '));
 		}
 	}
 });

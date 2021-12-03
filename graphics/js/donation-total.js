@@ -4,7 +4,7 @@ $(() => {
 	// The bundle name where all the tracker information is pulled from.
 	// Here, we're listening for the Tiltify total by default.
 	// Other bundle names that could be supplied here: speedcontrol-srcomtracker
-	var trackerBundle = 'speedcontrol-tiltify'
+	var trackerBundle = 'speedcontrol-gdqtracker'
 	
 	// JQuery selectors.
 	var donationTotalElem = $('#donationTotal'); // donation-total.html

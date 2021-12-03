@@ -8,22 +8,21 @@ html, body {
 	/* Turns the whole page into a flex box, so we can position the text horizontally/vertically. */
 	display: flex;
 	/* Options for settings below: flex-start (top/left), center, flex-end (bottom/right). */
-	align-items: center; /* Aligns vertically centre. */
-	justify-content: center; /* Aligns horizontally centre. */
+	align-items: flex-start; /* Aligns vertically centre. */
+	justify-content: flex-start; /* Aligns horizontally centre. */
 	
 	/* Change the default text font, size and colour. */
-	font-family: 'Arial';
+	font-family: "Humanst521 BT";
 	color: black;
-	font-size: 20px;
+	font-size: 16px;
 }
 
-/* Adds text before/after the estimate to improve the look. */
-/* You could also use this idea with things that aren't the estimate. */
-#gameEstimate:before {content: 'EST: ';} /* A label to explain what the numbers actually are. */
+.title {
+	background-color: #7B5088;
+	color: #fff;
+}
 
-/* Different colours for each state the timer can be in. */
-/* The state is set by JavaScript in timer.js. */
-.timer_running {color: black;}
-.timer_stopped {color: gray;}
-.timer_paused {color: gray;}
-.timer_finished {color: green;}
+.subtitle {
+	background-color: #000;
+	color: #fff;
+}

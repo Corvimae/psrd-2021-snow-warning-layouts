@@ -1,16 +1,16 @@
 {
-  "name": "speedcontrol-simpletext",
+  "name": "psrd-2021-snow-warning-layouts",
   "version": "2.0.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/speedcontrol/speedcontrol-simpletext.git"
+    "url": "git+https://github.com/Corvimae/psrd-2021-snow-warning-layouts"
   },
   "author": "zoton2",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/speedcontrol/speedcontrol-simpletext/issues"
+    "url": "https://github.com/Corvimae/psrd-2021-snow-warning-layouts/issues"
   },
-  "homepage": "https://github.com/speedcontrol/speedcontrol-simpletext#readme",
+  "homepage": "https://github.com/Corvimae/psrd-2021-snow-warning-layouts#readme",
   "nodecg": {
     "compatibleRange": "^1.5.0",
     "bundleDependencies": {
@@ -55,6 +55,26 @@
       {
         "file": "donation-total.html",
         "width": 1280,
+        "height": 720
+      },
+      {
+        "file": "up-next.html",
+        "width": 1800,
+        "height": 720
+      },
+      {
+        "file": "current-run.html",
+        "width": 1800,
+        "height": 720
+      },
+      {
+        "file": "current-run-race.html",
+        "width": 1800,
+        "height": 720
+      },
+      {
+        "file": "current-runner.html",
+        "width": 1800,
         "height": 720
       }
     ]
